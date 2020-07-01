@@ -1,0 +1,73 @@
+/* localização e info*/
+
+aside{
+    width: 80%;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+#infolocal{
+    display: flex;
+    align-items: center;
+}
+
+#infolocal address{
+    margin-left: 30px;
+}
+
+#infolocal strong{
+    font-weight: normal;
+    font-style: normal;
+}
+
+.socialitem{
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.socialitem img{
+    padding-right: 10px;
+}
+
+
+#glocal{
+    overflow: hidden;
+}
+
+#glocal img{
+    -moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#glocal img:hover {
+	-moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+@media (max-width:865px){
+
+    #infolocal .socialitem{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .socialitem img{
+        padding: 5px;
+    }   
+
+    aside{
+        width: 90%;
+    }
+}
+@media (max-width: 695px){
+    
+    #infolocal{
+        flex-direction: column;
+    }
+    
+    #infolocal address{
+        margin-left: 0;
+    }
+}

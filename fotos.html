@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro-Alcance Sports - Judô</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/stylemediaq.css">
+    <link rel="stylesheet" href="style/stylefotos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Roboto:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>  
+        <div id="logopro">
+            <a href="index.html"><img src="imgs/logos/logopro.png" alt=""></a> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="judo.html">Judô</a></li>
+                <li><a href="jiu.html">Jiu-Jitsu</a></li>
+                <li><a href="fotos.html">Fotos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="fullbar"></div> 
+
+        <h1>Fotos</h1>
+        
+        <nav id="navfilter">
+            <div id="navfiltertxt">
+                <input type="text" id="search">
+                <button type="submit">Procurar</button>
+            </div>
+            <div id="navfiltername"> <span>Procurando por:</span>
+                   <select>
+                       <option value="todos">Todos</option>
+                       <option value="judo">Judô</option>
+                       <option value="jiu">Jiu-Jitsu</option>
+                       <option value="maisrecentes">Mais Recentes</option>
+                       <option value="maisantigas">Mais Antigas</option>
+                   </select>   
+            </div>
+        </nav>
+
+        <section>
+            <div id="gridalbum">
+                <div class="albumitem">
+                    <a href=""><img src="imgs/torneiojiu/img16.jpg" alt=""></a>
+                    <p>Judô - 2021</p>
+                </div>
+                <div  class="albumitem">
+                    <a href=""><img src="imgs/torneiojiu/img16.jpg" alt=""></a>
+                    <p>Judô - Campeonatos 2022</p>
+                </div>
+                <div  class="albumitem">
+                    <a href=""><img src="imgs/torneiojiu/img16.jpg" alt=""></a>
+                    <p>Jiu-Jitsu - 2027</p>
+                </div>
+                <div  class="albumitem">
+                    <a href=""><img src="imgs/torneiojiu/img16.jpg" alt=""></a>
+                    <p>Jiu-Jitsu - Campeonatos 2020</p>
+                </div>
+            </div>
+        </section>
+
+    
+        <footer>
+            <div id="info">
+                <section id="newsletter"> <!--Newsletter-->
+                    <form action="get">
+                        <label for="newsinput">Newsletter</label>
+                        <p>Fique por dentro das nossas novidades e campeonatos locais.</p>
+                        <div id="email">
+                            <input type="email"  id="newsinput" name="newsinput" placeholder="seuemail@email.com">
+                            <button>Enviar</button>
+                        </div>
+                    </form>
+                </section> 
+                    <address> <!--Contato-->
+                        <p>@proalcancesports</p>
+                        <p>E-mail: <em>ubm11@uol.com.br</em></p>
+                        <p>Prof. Ubirajara:<em>+55 (13)99764-7407</em></p>
+                    </address>
+                </div>  
+                        <div>
+                            <p>© Todos os direitos reservados.</p>
+                        </div>             
+        </footer>
+    <script src="javascript.js"></script>
+    <script src="fotos.js"></script>
+</body>
+</html>
