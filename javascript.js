@@ -1,9 +1,9 @@
-
 const header = document.querySelector('header');
 const headernav = document.querySelector('header nav');
 
-const adicionarMenuIcon = () => {
 
+/*Create MenuIcon*/
+const adicionarMenuIcon = () => {
     const divspan = document.createElement('div');
     const span = document.createElement('span');
     const imgicon = document.createElement('img');
@@ -16,59 +16,48 @@ const adicionarMenuIcon = () => {
     span.appendChild(imgicon);
 
     divspan.style.width = '100%';
-    divspan.style.display ='flex';
-    divspan.style.justifyContent= 'space-between';
+    divspan.style.display = 'flex';
+    divspan.style.justifyContent = 'space-between';
     divspan.style.alignItems = 'center';
 
     span.style.cursor = 'pointer';
     span.style.height = '40px'
-    imgicon.setAttribute('src' , 'imgs/logos/menuicon.png');
+    imgicon.setAttribute('src', 'imgs/logos/menuicon.png');
     imgicon.setAttribute('alt', 'menuicon');
     imgicon.style.width = '100%';
 }
-
-const removerMenuIcon = () =>{
+/*Remove Menu Icon*/
+const removerMenuIcon = () => {
     const logodiv = document.querySelector('#logopro');
     const divspan = header.querySelector('div');
-    header.replaceChild(logodiv,divspan);
+    header.replaceChild(logodiv, divspan);
 }
-
-const toggleNav = () =>{
+/*Toggle Navigation on Mobile Devices*/
+const toggleNav = () => {
     let clicked = false;
     const imgicon = document.querySelector('span img');
-    imgicon.addEventListener('click', function(event){
-        if(!clicked){
+    imgicon.addEventListener('click', function (event) {
+        if (!clicked) {
             headernav.style.display = "block";
-           clicked = true;
-        }
-        else{
+            clicked = true;
+        } else {
             headernav.style.display = "none";
             clicked = false;
         }
     })
 }
 
-
-window.addEventListener("resize", function() {
+/*Functions for window less than 650px (onresize), toggle icon, toggle nav*/
+window.addEventListener("resize", function () {
     if (window.innerWidth < 650) {
-       adicionarMenuIcon();
+        adicionarMenuIcon();
         toggleNav();
-    }
-    else{
+    } else {
         removerMenuIcon();
     }
- })
-
- if(window.innerWidth < 650){
+})
+/*Functions for window less than 650px, toggle icon, toggle nav*/
+if (window.innerWidth < 650) {
     adicionarMenuIcon();
     toggleNav();
- }
-
-
-
-function slide () {
-    const slideimg = document.getElementById('slideitem');
-    let currentimg = 'imgs/treinojudo/treino16.png';
 }
-
-slide()
