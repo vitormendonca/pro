@@ -61,3 +61,7 @@ if (window.innerWidth < 650) {
     adicionarMenuIcon();
     toggleNav();
 }
+
+const myLazyLoad = new LazyLoad({
+    elements_selector: 'img'
+});
