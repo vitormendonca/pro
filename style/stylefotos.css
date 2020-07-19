@@ -1,9 +1,10 @@
-h1{
+h1 {
     text-align: center;
     padding: 60px 0px;
     font-size: 3em;
 }
-#navfilter{
+
+#navfilter {
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -11,7 +12,7 @@ h1{
     align-items: center;
 }
 
-#navfiltername{
+#navfiltername {
     display: flex;
     align-items: center;
     padding-bottom: 5px;
@@ -19,7 +20,7 @@ h1{
     margin-left: 20px;
 }
 
-#navfiltername::after{
+#navfiltername::after {
     content: '↴';
     font-size: 2em;
 }
@@ -31,7 +32,7 @@ select {
     padding: 5px;
     padding-bottom: 4px;
     border: none;
-    background-color : none;
+    background-color: none;
 }
 
 
@@ -40,23 +41,23 @@ select::-ms-expand {
 }
 
 
-#navfiltertxt{
+#navfiltertxt {
     width: 70%;
     display: inline-flex;
 }
 
-#search{
+#search {
     width: 100%;
     padding: 5px;
     height: 40px;
     border: none;
-    font-size: 16px;    
+    font-size: 16px;
     background-color: #282828;
     border-radius: 3px 0px 0px 3px;
     color: #fff;
 }
 
-#navfiltertxt button{
+#navfiltertxt button {
     padding: 0px 40px;
     background-color: #00E376;
     border-radius: 0px 3px 3px 0px;
@@ -65,20 +66,20 @@ select::-ms-expand {
     border: none;
 }
 
-#navfiltertxt button:hover{
+#navfiltertxt button:hover {
     opacity: 0.9;
 }
 
-#gridalbum{
-        width: 90%;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-gap: 1em;
-        padding: 60px 0;
+#gridalbum {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1em;
+    padding: 60px 0;
 }
 
-.albumitem{
+.albumitem {
     justify-self: center;
     max-width: 400px;
     cursor: pointer;
@@ -87,29 +88,29 @@ select::-ms-expand {
     font-weight: 500;
 }
 
-@media (max-width: 810px){
+@media (max-width: 810px) {
 
 
-    #navfilter{
+    #navfilter {
         width: 100%;
         flex-direction: column;
     }
 
-    #navfiltername{
-       margin-top: 10px;
+    #navfiltername {
+        margin-top: 10px;
     }
 }
 
-@media (max-width: 720px){
+@media (max-width: 720px) {
 
-    #navfiltertxt{
+    #navfiltertxt {
         width: 90%;
     }
 }
 
-@media (max-width: 520px){
+@media (max-width: 520px) {
 
-    #navfiltertxt button{
+    #navfiltertxt button {
         padding: 0 10px;
     }
 }
