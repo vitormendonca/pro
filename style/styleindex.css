@@ -26,8 +26,6 @@ main {
 
 #imgmain img {
     display: flex;
-    height: auto;
-    -webkit-height: auto;
     -webkit-object-fit: cover;
     object-fit: cover;
     -moz-transition: all 0.5s;
