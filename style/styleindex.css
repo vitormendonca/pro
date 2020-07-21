@@ -189,6 +189,10 @@ main {
     #imgmain,
     #imgmain img {
         max-height: 300px;
+        -webkit-webkit: width 300px;
+        -moz-webkit: width 300px;
+        -ms-webkit: width 300px;
+        -o-webkit: width 300px
     }
 
     main {
