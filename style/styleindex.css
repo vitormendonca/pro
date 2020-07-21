@@ -17,15 +17,11 @@ main {
 }
 
 #imgmain {
-    -webkit-max-width: 700px;
-    max-width: 700px;
-    max-height: 700px;
     display: flex;
     overflow: hidden;
 }
 
 #imgmain img {
-    display: flex;
     -webkit-object-fit: cover;
     object-fit: cover;
     -moz-transition: all 0.5s;
