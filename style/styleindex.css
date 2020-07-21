@@ -19,10 +19,11 @@ main {
 #imgmain {
     display: flex;
     overflow: hidden;
+    max-width: auto;
+    max-height: auto;
 }
 
 #imgmain img {
-    height: auto;
     -webkit-object-fit: cover;
     object-fit: cover;
     -moz-transition: all 0.5s;
@@ -184,6 +185,11 @@ main {
 }
 
 @media (max-width: 650px) {
+
+    #imgmain,
+    #imgmain img {
+        max-height: 300px;
+    }
 
     main {
         align-items: center;
