@@ -6,7 +6,7 @@ h1 {
 
 #sobre {
     text-align: center;
-    margin: 60px 0px;
+    margin: 40px 0px;
 }
 
 #sobrelabel {
@@ -33,6 +33,11 @@ h1 {
     width: 85%;
     text-align: center;
     margin: 0 auto;
+}
+
+#sobretxt p {
+    font-size: 1.1rem;
+    line-height: 1.5em;
 }
 
 #sobreprofimg {

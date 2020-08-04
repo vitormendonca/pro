@@ -37,8 +37,6 @@ section h1 span {
 }
 
 #secjudo {
-    display: flex;
-    justify-content: space-between;
     width: 80%;
     margin: 60px auto;
 }
@@ -68,6 +66,10 @@ h2 {
     text-align: center;
     min-width: 250px;
     max-width: 350px;
+    float: right;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-top: 60px;
 }
 
 
@@ -140,18 +142,22 @@ h2 {
 
 @media (max-width:865px) {
     #secjudo {
+        display: flex;
         width: 90%;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
 
     #secjudo dl {
         margin-right: 0px;
-        padding-bottom: 60px;
+        padding-bottom: 40px;
         text-align: center;
     }
 
     .seccallfotos {
+        float: none;
         width: 100%;
+        margin: 0;
+        padding: 0;
     }
 }
