@@ -1,52 +1,68 @@
 <?php
-    use PHPMailer/PHPMailer/PHPMailer/;
-
-if(isset($_POST['submit'])){
-    $emailDe = $_POST['name'];
-
-
-    $mailTo = 'ubm11@uol.com.br'
-    $headers =  'De:'.$emailDe;
-    $txt = 'Oi, Ubirajara.'.$emailDe.'assinou a suas notícias no website da Pro-Alcance.'
-    $subject = $_POST['subject'];
-    $body = $_POST['body']
-    mail($mailTo,$subject, $txt, $headers);
-    header('Location : index.php?mailsend')
-
-
-
-    require_once 'PHPMailer\src\Exception.php';
-    require_once 'PHPMailer\src\OAuth.php';
-    require_once 'PHPMailer\src\POP3.php';
-    require_once 'PHPMailer\src\SMTP.php';
-
-   
-        $mail = new PHPMailer();
-
-        //SMTP Settings
-        $mail->isSMTP();
-        $mail->Host = "smtp.gmail.com";
-        $mail->SMTPAuth = true;
-        $mail->Username = "vitor.fsm@hotmail.com";
-        $mail->Password = 'souCAV99';
-        $mail->Port = 465; //587
-        $mail->SMTPSecure = "ssl"; //tls
-
-        //Email Settings
-        $mail->isHTML(true);
-        $mail->setFrom($email, $name);
-        $mail->addAddress("vitor.fsm@hotmail.com");
-        $mail->Subject = $subject;
-        $mail->Body = $body;
-
-        if ($mail->send()) {
-            $status = "success";
-            $response = "Email is sent!";
-        } else {
-            $status = "failed";
-            $response = "Something is wrong: <br><br>" . $mail->ErrorInfo;
-        }
-
-        exit(json_encode(array("status" => $status, "response" => $response)));
-    }
-}
+if (isset($_POST['BTEnvia'])) {
+ 
+ //Variaveis de POST, Alterar somente se necessário 
+ //====================================================
+ $nome = $_POST['nome'];
+ $email = $_POST['email'];
+ $telefone = $_POST['telefone']; 
+ $mensagem = $_POST['mensagem'];
+ //====================================================
+ 
+ //REMETENTE --> ESTE EMAIL TEM QUE SER VALIDO DO DOMINIO
+ //==================================================== 
+ $email_remetente = " ubm11@uol.com.br"; // deve ser uma conta de email do seu dominio 
+ //====================================================
+ 
+ //Configurações do email, ajustar conforme necessidade
+ //==================================================== 
+ $email_destinatario = "ubm11@uol.com.br"; // pode ser qualquer email que receberá as mensagens
+ $email_reply = "$email"; 
+ $email_assunto = "Contato Formulário www.proalcancesports.com.br"; // Este será o assunto da mensagem
+ //====================================================
+ 
+ //Monta o Corpo da Mensagem
+ //====================================================
+ $email_conteudo = "Nome = $nome \n"; 
+ $email_conteudo .= "Email = $email \n";
+ $email_conteudo .= "Telefone = $telefone \n"; 
+ $email_conteudo .= "Mensagem = $mensagem \n"; 
+ //====================================================
+ 
+ //Seta os Headers (Alterar somente caso necessario) 
+ //==================================================== 
+ $email_headers = implode ( "\n",array ( "From: $email_remetente", "Reply-To: $email_reply", "Return-Path: $email_remetente","MIME-Version: 1.0","X-Priority: 3","Content-Type: text/html; charset=UTF-8" ) );
+ //====================================================
+ 
+ //Enviando o email 
+ //==================================================== 
+ if (mail ($email_destinatario, $email_assunto, nl2br($email_conteudo), $email_headers)){ 
+ echo "</b>E-Mail enviado com sucesso!</b>"; 
+ } 
+ else{ 
+ echo "</b>Falha no envio do E-Mail!</b>"; } 
+ //====================================================
+} 
+?>
+ 
+ <form action="<? $PHP_SELF; ?>" method="POST"> 
+ <p> 
+ Nome:<br /> 
+ <input type="text" size="30" name="nome"> 
+ </p>   
+ <p> 
+ E-mail:<br /> 
+ <input type="text" size="30" name="email"> 
+ </p>   
+ <p> 
+ Telefone:<br /> 
+ <input type="text" size="35" name="telefone"> 
+ </p>   
+ <p> 
+ Mensagem:<br /> 
+ <input type="text" size="35" name="mensagem"> 
+ </p>   
+ <p>
+          <input type="submit" name="BTEnvia" value="Enviar"> 
+   <input type="reset" name="BTApaga" value="Apagar">
+        </p>

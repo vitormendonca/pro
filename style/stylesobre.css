@@ -102,8 +102,13 @@ h1 {
         align-items: center;
     }
 
+    #sobretxt {
+        width: 90%;
+    }
+
+
     #sobreproftxt p {
-        max-width: 100%;
+        max-width: 90%;
     }
 
 
@@ -126,13 +131,15 @@ h1 {
     }
 }
 
+
 @media (max-width:430px) {
     h1 {
-        font-size: 3em;
+        font-size: 2.5em;
     }
 
     #sobreprof h2 {
         font-size: 2em;
-        margin: 20px 20px 0px 0px
+        margin: 0px 20px 0px 20px
     }
+
 }
