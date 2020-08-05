@@ -41,14 +41,14 @@ h1 {
 }
 
 #sobreprofimg {
-    max-width: 400px;
+    max-width: 350px;
     min-width: 300px;
     margin-right: 40px;
 }
 
 #sobreprof {
     display: flex;
-    padding: 60px 0px;
+    padding: 60px;
 }
 
 #sobreproftxt {
@@ -100,6 +100,7 @@ h1 {
     #sobreprof {
         flex-direction: column;
         align-items: center;
+        padding: 60px 40px;
     }
 
     #sobretxt {
@@ -120,6 +121,12 @@ h1 {
 }
 
 @media (max-width:740px) {
+    #sobreprof {
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 0px;
+    }
+
     #sobreproftxt ul {
         max-width: 100%;
         flex-wrap: wrap;
